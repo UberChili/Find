@@ -24,17 +24,20 @@
 
 int main(int argc, string argv[])
 {
-    // TODO: comment me
+    // Checks for correct usage by Command Line Arguments
+	// Returns an error if not given arguments
     if (argc != 2 && argc != 3)
     {
         printf("Usage: generate n [s]\n");
         return 1;
     }
 
-    // TODO: comment me
+    // Converts argv[1] to integer and then
+	// asigns that intenger to n
     int n = atoi(argv[1]);
 
-    // TODO: comment me
+    // Checks if the user inputted a seed number
+	// Then uses this seed, else it doesn't 
     if (argc == 3)
     {
         srand48((long int) atoi(argv[2]));
@@ -44,7 +47,7 @@ int main(int argc, string argv[])
         srand48((long int) time(NULL));
     }
 
-    // TODO: comment me
+    // Iterates to n, printing random numbers
     for (int i = 0; i < n; i++)
     {
         printf("%i\n", (int) (drand48() * LIMIT));
