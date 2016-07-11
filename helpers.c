@@ -13,11 +13,19 @@
 
 /**
  * Returns true if value is in array of n values, else false.
+ * Using Linear Search
  */
 bool search(int value, int values[], int n)
 {
-    // TODO: implement a searching algorithm
-    return false;
+	for (int i = 0; i < n; i++)
+	{
+		if (values[i] == value)
+		{
+			return true;
+		}
+	}
+
+	return false;
 }
 
 /**
