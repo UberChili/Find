@@ -18,7 +18,11 @@
 bool search(int value, int values[], int n)
 {
 	// Initializing values
+	
+	// Left
 	int L = 0;
+
+	// Right
 	int R = n - 1;
 
 	while (L <= R)
