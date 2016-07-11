@@ -17,11 +17,29 @@
  */
 bool search(int value, int values[], int n)
 {
-	for (int i = 0; i < n; i++)
+	// Initializing values
+	int L = 0;
+	int R = n - 1;
+
+	while (L <= R)
 	{
-		if (values[i] == value)
+		// Calculating midpoint
+		int mid = (L + R) / 2;
+
+		if (values[mid] == value)
 		{
+			// Value has been found
 			return true;
+		}
+		else if (values[mid] < value)
+		{
+			// Value is located on the right side of mid
+			L = mid + 1;
+		}
+		else
+		{
+			// Value is located on the left side of mid
+			R = mid - 1;
 		}
 	}
 
